@@ -1,5 +1,7 @@
 .footer{
+  height: 25vh;
   height: 25svh;
+  height: 25dvh;
   background-color: black;
   display: flex;
   justify-content: center;
