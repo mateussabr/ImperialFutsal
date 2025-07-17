@@ -7,7 +7,7 @@
         & > div.title{
             background: var(--tertiary-color);
             width: 50%;
-            height: 100dvh;
+            height: 100svh;
             color: white;
             display: flex;
             justify-content: center;
@@ -25,7 +25,7 @@
 .gallery {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url('/foto5.png');
     width: 50%;
-    height: 100dvh;
+    height: 100svh;
     overflow: hidden;
     position: relative;
     display: flex;

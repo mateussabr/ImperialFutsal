@@ -1,6 +1,6 @@
 .home {
   width: 100vw;
-  min-height: 100dvh;
+  min-height: 100svh;
   background-image: url('/fundo_home.png');
   background-size: cover;
   background-position: center 0%;
