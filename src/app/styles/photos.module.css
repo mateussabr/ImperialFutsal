@@ -1,0 +1,143 @@
+.photos{
+    padding: 0;
+
+    & > div{
+        display: flex;
+
+        & > div.title{
+            background: var(--tertiary-color);
+            width: 50%;
+            height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & > h2{
+                font-size: 10rem;
+            }
+        }
+        
+
+    }
+}
+
+.gallery {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url('/foto5.png');
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    color: white;
+
+    & h3{
+        font-size: 7rem;
+    }
+}
+
+.slider {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slideTrack {
+  display: flex;
+  width: calc(250px * 8); /* 4 imagens x 2 (duplicadas) */
+  animation: scroll 20s linear infinite;
+}
+
+.slideTrack img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  margin: 0 1rem;
+  box-shadow: var(--shadow);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .photos > div > .title {
+    width: 100%;
+    height: auto;
+    padding: 4rem 2rem;
+  }
+
+  .photos > div > .title h2 {
+    font-size: 5.5rem !important;
+    text-align: center;
+  }
+
+  .gallery {
+    width: 100%;
+    height: auto;
+    padding: 4rem 0rem;
+    gap: 5rem;
+  }
+
+  .gallery h3 {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  .slider {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .slideTrack {
+    width: max-content;
+  }
+
+  .slideTrack img {
+    width: 180px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .photos > div > .title h2 {
+    font-size: 4rem;
+  }
+
+  .gallery h3 {
+    font-size: 3rem;
+  }
+
+  .slideTrack img {
+    width: 140px;
+    height: 100px;
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .photos > div > .title h2 {
+    font-size: 3.5rem !important;
+  }
+
+  .gallery h3 {
+    font-size: 3rem !important;
+  }
+
+  .slideTrack img {
+    width: 140px;
+    height: 100px;
+    margin: 0 0.5rem;
+  }
+}

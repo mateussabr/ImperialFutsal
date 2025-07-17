@@ -1,0 +1,229 @@
+.achievements {
+  text-align: center;
+  padding: 3rem;
+  background-color: var( --secondary-color);
+  color: white;
+  border-bottom: 1rem solid white;
+  padding-left: 0;
+  padding-right : 0;
+}
+
+.title {
+  font-size: 5rem;
+  margin-bottom: 5rem;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  opacity: 0.1;
+  font-size: 5rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  transition: all 0.2s ease;
+  
+}
+
+.arrow:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    color: var(--primary-color); 
+}
+
+.arrow.next{
+    right: 5rem;
+}
+
+.arrow.prev{
+    left: 5rem;
+}
+
+/* Janela visível: mostra só 4 */
+.window {
+  width: 1600px; /* 4 cards de 400px cada (ajuste se mudar tamanho dos cards) */
+  overflow: hidden;
+}
+
+/* Faixa com todos os grupos */
+.track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Cada grupo de 4 */
+.group {
+  display: flex;
+  flex-shrink: 0;
+  width: 100vw;
+  height: 50rem;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card {
+    background-color: transparent;
+    border-bottom-right-radius: 2.5rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.6);
+    flex: 1;  
+    min-width: 180px;
+  }
+  
+  .card:hover{
+    & > .title_{
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 1);;
+  }
+ 
+  & > .qtd_title{
+    & > p{
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.title_{
+  height: 25%;
+  border-bottom:0.1rem solid rgba(255, 255, 255, 0.1);
+  transition: border 0.2s ease-in-out;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  & > p{
+    font-size: 2rem;
+    font-weight: 800; 
+  }
+}
+
+.qtd_title{
+  padding: 5rem;
+  height: 75%;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  
+  
+  & > p{
+    transition: all 0.2s ease-in-out;
+    font-size: 5rem;
+    font-weight: 800; 
+  }
+}
+
+
+.window:active {
+  cursor: grabbing;
+}
+
+
+.window {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+    overflow-x: auto;
+  cursor: grab;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.window::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.track {
+  display: flex;
+  gap: 1rem;
+  min-width: fit-content;
+  width: max-content;
+  transition: transform 0.5s ease-in-out;
+  touch-action: pan-x;
+  -webkit-overflow-scrolling: touch;
+
+}
+
+.group {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  height: 50rem;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Responsivo sem mudar a quantidade de cards */
+@media (max-width: 1300px) {
+  .group {
+    height: 45rem;
+  }
+
+  .qtd_title > p {
+    font-size: 3.5rem;
+  }
+
+  .title_ > p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .qtd_title {
+    padding: 2.5rem;
+  }
+
+  .qtd_title > p {
+    font-size: 3rem;
+  }
+
+  .title_ > p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .arrow {
+    font-size: 3rem;
+  }
+
+  .qtd_title > p {
+    font-size: 2.5rem;
+  }
+
+  .title_ > p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .qtd_title > p {
+    font-size: 2rem;
+  }
+
+  .title_ > p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0e2342;
+  --secondary-color: #1c202b;
+  --tertiary-color: #5586a6ff;
+  --light-gray: #f0f0f0;
+  --font-color: #1c1c1c;
+  --white-color: white;
+  --golden: #f1f14d;
+
+  --shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  padding: 5rem 5rem 2rem 5rem;
+  overflow: hidden;
+}
+
+span {
+  color: var(  --tertiary-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+span.golden{
+  color:var(--golden); 
+}
+
+b{
+  font-size: 3rem;
+}
+
+ul {
+  list-style: none;
+}
+
+p,
+li {
+  font-size: 1.44rem;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--font-color);
+}

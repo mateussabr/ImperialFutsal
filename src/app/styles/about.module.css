@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+.about {
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  min-height: 500px;
+  background-image: 
+    radial-gradient(#777 5%, transparent 6%),
+    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.65));
+  background-size: 10px 10px, cover;
+  background-position: top left, center;
+  background-repeat: repeat, no-repeat;
+  position: relative;
+  padding: 5rem 2rem 2rem 2rem;
+  padding-right: 340px;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+  & > div {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    padding: 1rem 2.5rem;
+    gap: 1.5rem;
+  }
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100%;
+  filter: brightness(0.75);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.title {
+  position: relative;
+  font-family: 'Bodoni Moda', serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 5rem;
+  display: inline-block;
+  z-index: 1;
+}
+
+.textWrapper {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 2rem 0 0;
+  max-width: 1200px;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
+
+.textColumn {
+  flex: 1;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+
+  & > p {
+    font-size: 1.75rem;
+  }
+}
+
+.sidebar img,
+.sidebar > div {
+  pointer-events: none;
+  user-select: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 66, 99, 0.5);
+  z-index: 1;
+}
+
+/* ============================
+   RESPONSIVIDADE
+============================= */
+
+
+
+@media (max-width: 1324px) {
+ .about > div {
+    align-items: center;
+
+    .title {
+      font-size: 2rem;
+    }
+  }
+
+  .textColumn > p {
+    font-size: 1.35rem;
+  }
+
+}
+
+@media (max-width: 1065px) {
+    .textColumn > p {
+    font-size: 1.25rem;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .about {
+    padding: 0;
+    flex-direction: column; /* novo: stack tudo em coluna */
+  }
+
+  .sidebar {
+    position: relative;  /* deixa de ser fixa à direita */
+    width: 100%;
+    height: 250px;
+  }
+
+  .about > div {
+    align-items: center;
+
+    .title {
+      font-size: 2.5rem;
+    }
+  }
+
+  .textWrapper {
+    width: 100%;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .textColumn > p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: block; /* não esconder mais */
+    position: relative;
+    width: 100%;
+    height: 200px;
+  }
+
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .textColumn > p {
+    font-size: 0.85rem;
+  }
+}
